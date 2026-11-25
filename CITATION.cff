@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: If you use this dataset, please cite the associated paper.
+title: BD-EduTech-10k
+type: dataset
+authors:
+- given-names: Aftab Hossain
+  family-names: Mikat
+  affiliation: Rajshahi University of Engineering & Technology (RUET)
+- given-names: Tamjid Hasan
+  family-names: Fahim
+  affiliation: Rajshahi University of Engineering and Technology (RUET)
+- given-names: Md. Shadikur Rahman
+  family-names: Shadiq
+  affiliation: Rajshahi University of Engineering and Technology (RUET)
+- given-names: Sazzad
+  family-names: Ahmed
+  affiliation: Khulna University of Engineering & Technology (KUET)
+preferred-citation:
+  type: conference-paper
+  title: 'BD-EduTech-10k: Multi-Task Aspect-Category Analysis for Trilingual EduTech
+    Feedback'
+  authors:
+  - given-names: Aftab Hossain
+    family-names: Mikat
+    affiliation: Rajshahi University of Engineering & Technology (RUET)
+  - given-names: Tamjid Hasan
+    family-names: Fahim
+    affiliation: Rajshahi University of Engineering and Technology (RUET)
+  - given-names: Md. Shadikur Rahman
+    family-names: Shadiq
+    affiliation: Rajshahi University of Engineering and Technology (RUET)
+  - given-names: Sazzad
+    family-names: Ahmed
+    affiliation: Khulna University of Engineering & Technology (KUET)
+  year: 2026

@@ -1,0 +1,135 @@
+{
+  "dataset": "BD-EduTech-10k",
+  "fields": {
+    "comment_id": {
+      "type": "integer",
+      "description": "Unique comment identifier from the supplied CSV."
+    },
+    "text": {
+      "type": "string",
+      "description": "Comment text as supplied."
+    },
+    "sentiment": {
+      "type": "string",
+      "labels": {
+        "NEGATIVE": "Complaint, dissatisfaction, frustration or criticism; interpret sarcasm by intended meaning.",
+        "NEUTRAL": "Question, inquiry or factual observation without strong emotional tone.",
+        "POSITIVE": "Clear satisfaction, appreciation or gratitude toward teaching, course or platform."
+      }
+    },
+    "category": {
+      "type": "string",
+      "separator": " | ",
+      "description": "One or two aspect categories, separated by a pipe with surrounding spaces.",
+      "labels": [
+        "Academic & Pedagogical Experience",
+        "Community Inquiries & Feedback",
+        "Praise & Gratitude",
+        "Technical & UI Issues",
+        "Support Trust & Management",
+        "Troll / Controversy"
+      ]
+    }
+  },
+  "acsa": {
+    "description": "Six category-specific sentiment slots. Absent indicates a category not addressed. The CSV preserves its original title-case labels.",
+    "labels": {
+      "Negative": "Complaint, dissatisfaction, frustration or criticism; interpret sarcasm by intended meaning.",
+      "Neutral": "Question, inquiry or factual observation without strong emotional tone.",
+      "Positive": "Clear satisfaction, appreciation or gratitude toward teaching, course or platform.",
+      "Absent": "Aspect not addressed; exclude from gold-present ACSA evaluation."
+    },
+    "columns": {
+      "acsa_Academic": {
+        "category": "Academic & Pedagogical Experience",
+        "definition": "Teaching style, concept clarity and course structure."
+      },
+      "acsa_Community": {
+        "category": "Community Inquiries & Feedback",
+        "definition": "Peer recommendations, enrollment queries and platform comparisons."
+      },
+      "acsa_Praise": {
+        "category": "Praise & Gratitude",
+        "definition": "Appreciation or thanks where praise is the dominant purpose."
+      },
+      "acsa_Technical": {
+        "category": "Technical & UI Issues",
+        "definition": "App bugs, video buffering, login failures and payment errors."
+      },
+      "acsa_Support": {
+        "category": "Support Trust & Management",
+        "definition": "Customer support, refund disputes and trust in management."
+      },
+      "acsa_Troll": {
+        "category": "Troll / Controversy",
+        "definition": "Off-topic attacks, inflammatory comparisons and provocation."
+      }
+    },
+    "single_category_rule": "The present aspect inherits the sentence sentiment.",
+    "dual_category_rule": "Annotate polarity separately for each present aspect."
+  },
+  "data_quality": {
+    "excluded_comment_id": 16976,
+    "exclusion_reason": "Unparseable category label.",
+    "category_acsa_mismatches_preserved": [
+      {
+        "comment_id": 6863,
+        "category_only": [],
+        "acsa_only": [
+          "Academic & Pedagogical Experience"
+        ]
+      },
+      {
+        "comment_id": 6944,
+        "category_only": [
+          "Academic & Pedagogical Experience",
+          "Community Inquiries & Feedback"
+        ],
+        "acsa_only": []
+      },
+      {
+        "comment_id": 10548,
+        "category_only": [],
+        "acsa_only": [
+          "Praise & Gratitude"
+        ]
+      },
+      {
+        "comment_id": 11328,
+        "category_only": [],
+        "acsa_only": [
+          "Praise & Gratitude"
+        ]
+      },
+      {
+        "comment_id": 11658,
+        "category_only": [],
+        "acsa_only": [
+          "Community Inquiries & Feedback"
+        ]
+      },
+      {
+        "comment_id": 12609,
+        "category_only": [
+          "Troll / Controversy"
+        ],
+        "acsa_only": []
+      },
+      {
+        "comment_id": 200,
+        "category_only": [
+          "Troll / Controversy"
+        ],
+        "acsa_only": []
+      },
+      {
+        "comment_id": 13056,
+        "category_only": [
+          "Community Inquiries & Feedback",
+          "Technical & UI Issues"
+        ],
+        "acsa_only": []
+      }
+    ]
+  }
+}
